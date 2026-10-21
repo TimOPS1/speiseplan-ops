@@ -1,0 +1,59 @@
+name: Speiseplan aktualisieren
+
+on:
+  schedule:
+    # Zeiten sind UTC. Mo-Fr dreimal morgens (in Sommerzeit 06:17 / 07:17 / 08:17, in Winterzeit 05:17 / 06:17 / 07:17),
+    # falls das PDF der Küche erst spät hochgeladen wird. Dazu Freitagnachmittag und Sonntagabend für den Plan der Folgewoche.
+    - cron: "17 4,5,6 * * 1-5"
+    - cron: "43 15 * * 5"
+    - cron: "43 17 * * 0"
+  workflow_dispatch:   # Knopf "Run workflow" im Reiter Actions für einen Lauf von Hand
+
+permissions:
+  contents: write
+
+concurrency:
+  group: speiseplan-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Abhängigkeiten installieren
+        run: pip install pdfplumber requests
+
+      - name: Tests des Plan-Lesers
+        run: python scripts/test_parse.py
+
+      - name: Speiseplan von der Schulwebsite lesen
+        id: update
+        continue-on-error: true
+        run: python scripts/update_menu.py
+
+      - name: Änderung speichern
+        run: |
+          git config user.name "speiseplan-bot"
+          git config user.email "speiseplan-bot@users.noreply.github.com"
+          git add menu.js
+          if git diff --cached --quiet; then
+            echo "Keine Änderung am Speiseplan."
+          else
+            git commit -m "Speiseplan aktualisiert"
+            git push
+          fi
+
+      # Ist ein Tag nicht sicher lesbar, wird die Seite trotzdem aktualisiert (sie zeigt dann einen Hinweis),
+      # und dieser Lauf wird als fehlgeschlagen markiert, damit GitHub eine Mail schickt.
+      - name: Fehlschlag melden
+        if: steps.update.outcome == 'failure'
+        run: |
+          echo "Der Speiseplan war nicht vollständig lesbar. Details stehen oben im Protokoll."
+          exit 1
