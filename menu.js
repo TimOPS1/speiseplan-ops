@@ -3,95 +3,110 @@
 // Pro Tag "fleisch" und "veg". Gericht = Schlüssel aus data.js, oder { k, t } mit abweichendem Namen, oder { t } ohne Bild.
 // "pruefen": true = der Tag ließ sich nicht sicher lesen; die Seite zeigt dann nur einen Hinweis mit Link zum PDF.
 window.MENU = {
-  "2026-10-19": {
+  "2026-10-26": {
     "fleisch": {
       "main": {
-        "k": "paprikaschote"
+        "t": "Rinderfrikadelle",
+        "platzhalter": true
       },
       "sides": [
-        "tomatensosse",
+        {
+          "t": "Soße"
+        },
+        {
+          "t": "Kohlrabi Gemüse"
+        },
+        "kartoffeln"
+      ],
+      "dessert": true
+    },
+    "veg": {
+      "main": {
+        "t": "Gemüsefrikadelle",
+        "platzhalter": true
+      },
+      "sides": [
+        {
+          "t": "Soße"
+        },
+        {
+          "t": "Kohlrabi Gemüse"
+        },
+        "kartoffeln"
+      ],
+      "dessert": true
+    },
+    "kw": 44,
+    "pdf": "https://ops-dillenburg.de/wp-content/uploads/2026/10/KW-44-2026_-Website.pdf"
+  },
+  "2026-10-27": {
+    "fleisch": {
+      "main": {
+        "t": "Geflügelgeschnetzeltes Asia",
+        "platzhalter": true
+      },
+      "sides": [
         "reis"
       ],
       "dessert": true
     },
     "veg": {
       "main": {
-        "k": "paprikaschote",
-        "t": "Vegetarisch gefüllte Paprikaschote"
+        "t": "Asiatisches Gemüseragout",
+        "platzhalter": true
       },
       "sides": [
-        "tomatensosse",
         "reis"
       ],
       "dessert": true
     },
-    "kw": 43,
-    "pdf": "https://ops-dillenburg.de/wp-content/uploads/2026/10/KW-43-2026-Website.pdf"
+    "kw": 44,
+    "pdf": "https://ops-dillenburg.de/wp-content/uploads/2026/10/KW-44-2026_-Website.pdf"
   },
-  "2026-10-20": {
+  "2026-10-28": {
     "fleisch": {
       "none": "Heute gibt es kein Fleischgericht"
     },
     "veg": {
       "main": {
-        "k": "ruehrei"
+        "t": "Tortellini",
+        "platzhalter": true
       },
       "sides": [
-        "spinat",
-        "pueree"
+        {
+          "t": "Käsesoße"
+        },
+        "salat"
       ],
       "dessert": true
     },
-    "kw": 43,
-    "pdf": "https://ops-dillenburg.de/wp-content/uploads/2026/10/KW-43-2026-Website.pdf"
+    "kw": 44,
+    "pdf": "https://ops-dillenburg.de/wp-content/uploads/2026/10/KW-44-2026_-Website.pdf"
   },
-  "2026-10-21": {
+  "2026-10-29": {
     "fleisch": {
       "main": {
-        "k": "schweinegulasch"
+        "t": "Fischfilet „Bordelaise“",
+        "platzhalter": true
       },
       "sides": [
-        "gemuese",
-        "nudeln"
+        "pueree",
+        "salat"
       ],
       "dessert": true
     },
     "veg": {
       "main": {
-        "k": "gemuesegulasch"
+        "t": "Rote Beete Puffer",
+        "platzhalter": true
       },
       "sides": [
-        "nudeln"
+        "pueree",
+        "salat"
       ],
       "dessert": true
     },
-    "kw": 43,
-    "pdf": "https://ops-dillenburg.de/wp-content/uploads/2026/10/KW-43-2026-Website.pdf"
-  },
-  "2026-10-22": {
-    "fleisch": {
-      "main": {
-        "k": "backfisch"
-      },
-      "sides": [
-        "remouladensosse",
-        "kartoffeln",
-        "gurkensalat"
-      ],
-      "dessert": true
-    },
-    "veg": {
-      "main": {
-        "k": "fischfingers"
-      },
-      "sides": [
-        "remouladensosse",
-        "kartoffeln",
-        "gurkensalat"
-      ],
-      "dessert": true
-    },
-    "kw": 43,
-    "pdf": "https://ops-dillenburg.de/wp-content/uploads/2026/10/KW-43-2026-Website.pdf"
+    "kw": 44,
+    "pdf": "https://ops-dillenburg.de/wp-content/uploads/2026/10/KW-44-2026_-Website.pdf"
   }
 };
