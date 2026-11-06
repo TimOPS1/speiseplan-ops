@@ -3,102 +3,111 @@
 // Pro Tag "fleisch" und "veg". Gericht = Schlüssel aus data.js, oder { k, t } mit abweichendem Namen, oder { t } ohne Bild.
 // "pruefen": true = der Tag ließ sich nicht sicher lesen; die Seite zeigt dann nur einen Hinweis mit Link zum PDF.
 window.MENU = {
-  "2026-11-02": {
+  "2026-11-09": {
     "fleisch": {
       "main": {
-        "k": "koenigsberger-klopse"
+        "k": "wurstgulasch"
       },
       "sides": [
+        "nudeln",
         {
-          "t": "Kapernsoße"
-        },
-        "reis",
-        {
-          "t": "Rote Beete Salat"
+          "t": "Karottensalat"
         }
       ],
       "dessert": true
     },
     "veg": {
       "main": {
-        "t": "Vegetarische Klopse",
-        "platzhalter": true
+        "k": "wurstgulasch",
+        "t": "Vegetarisches Wurstgulasch"
       },
       "sides": [
+        "nudeln",
         {
-          "t": "Kapernsoße"
-        },
-        "reis",
-        {
-          "t": "Rote Beete Salat"
+          "t": "Karottensalat"
         }
       ],
       "dessert": true
     },
-    "kw": 45,
-    "pdf": "https://ops-dillenburg.de/wp-content/uploads/2026/11/KW-45-2026_-Website.pdf"
+    "kw": 46,
+    "pdf": "https://ops-dillenburg.de/wp-content/uploads/2026/11/KW-46-2026_-Website.pdf"
   },
-  "2026-11-03": {
+  "2026-11-10": {
     "fleisch": {
       "main": {
-        "t": "Geflügelbratwurst",
-        "platzhalter": true
+        "k": "fischfrikadelle"
       },
       "sides": [
         {
-          "t": "Senf"
+          "t": "Soße"
         },
-        "gemuese",
+        "spinat",
         "pueree"
       ],
       "dessert": true
     },
     "veg": {
       "main": {
-        "k": "bratwurst",
-        "t": "Vegetarische Bratwurst"
+        "k": "fischfingers"
       },
       "sides": [
         {
-          "t": "Senf"
+          "t": "Soße"
         },
-        "gemuese",
+        "spinat",
         "pueree"
       ],
       "dessert": true
     },
-    "kw": 45,
-    "pdf": "https://ops-dillenburg.de/wp-content/uploads/2026/11/KW-45-2026_-Website.pdf"
+    "kw": 46,
+    "pdf": "https://ops-dillenburg.de/wp-content/uploads/2026/11/KW-46-2026_-Website.pdf"
   },
-  "2026-11-04": {
-    "pruefen": true,
-    "kw": 45,
-    "pdf": "https://ops-dillenburg.de/wp-content/uploads/2026/11/KW-45-2026_-Website.pdf"
-  },
-  "2026-11-05": {
+  "2026-11-11": {
     "fleisch": {
       "main": {
-        "t": "Hackfleischsoße Bolognese",
+        "t": "Geflügelschnitzel",
         "platzhalter": true
       },
       "sides": [
-        "nudeln",
-        "bohnensalat"
+        {
+          "t": "Pilzrahmsoße"
+        },
+        "gemuese",
+        "kartoffeln"
       ],
       "dessert": true
     },
     "veg": {
       "main": {
-        "t": "Vegetarische Bolognese",
-        "platzhalter": true
+        "k": "gemueseschnitzel"
       },
       "sides": [
-        "nudeln",
-        "bohnensalat"
+        {
+          "t": "Pilzrahmsoße"
+        },
+        "gemuese",
+        "kartoffeln"
       ],
       "dessert": true
     },
-    "kw": 45,
-    "pdf": "https://ops-dillenburg.de/wp-content/uploads/2026/11/KW-45-2026_-Website.pdf"
+    "kw": 46,
+    "pdf": "https://ops-dillenburg.de/wp-content/uploads/2026/11/KW-46-2026_-Website.pdf"
+  },
+  "2026-11-12": {
+    "fleisch": {
+      "none": "Heute gibt es kein Fleischgericht"
+    },
+    "veg": {
+      "main": {
+        "t": "Nudel mit Tomatenkräutersoße",
+        "platzhalter": true
+      },
+      "sides": [
+        "salat"
+      ],
+      "dessert": true
+    },
+    "kw": 46,
+    "pdf": "https://ops-dillenburg.de/wp-content/uploads/2026/11/KW-46-2026_-Website.pdf"
   }
 };
